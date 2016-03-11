@@ -15,6 +15,9 @@
 		D9F9E98D1C8D919200C23D1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F9E98B1C8D919200C23D1C /* LaunchScreen.storyboard */; };
 		D9F9E9981C8D919300C23D1C /* comocomoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9971C8D919300C23D1C /* comocomoTests.swift */; };
 		D9F9E9A31C8D919300C23D1C /* comocomoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9A21C8D919300C23D1C /* comocomoUITests.swift */; };
+		D9F9E9B11C8D926D00C23D1C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9B01C8D926D00C23D1C /* ThirdViewController.swift */; };
+		D9F9E9B31C8D937600C23D1C /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9B21C8D937600C23D1C /* FourthViewController.swift */; };
+		D9F9E9B51C8D948600C23D1C /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9B41C8D948600C23D1C /* FifthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		D9F9E99E1C8D919300C23D1C /* comocomoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = comocomoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F9E9A21C8D919300C23D1C /* comocomoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comocomoUITests.swift; sourceTree = "<group>"; };
 		D9F9E9A41C8D919300C23D1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9F9E9B01C8D926D00C23D1C /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		D9F9E9B21C8D937600C23D1C /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		D9F9E9B41C8D948600C23D1C /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				D9F9E9891C8D919200C23D1C /* Assets.xcassets */,
 				D9F9E98B1C8D919200C23D1C /* LaunchScreen.storyboard */,
 				D9F9E98E1C8D919200C23D1C /* Info.plist */,
+				D9F9E9B01C8D926D00C23D1C /* ThirdViewController.swift */,
+				D9F9E9B21C8D937600C23D1C /* FourthViewController.swift */,
+				D9F9E9B41C8D948600C23D1C /* FifthViewController.swift */,
 			);
 			path = comocomo;
 			sourceTree = "<group>";
@@ -259,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F9E9B51C8D948600C23D1C /* FifthViewController.swift in Sources */,
 				D9F9E9851C8D919200C23D1C /* SecondViewController.swift in Sources */,
 				D9F9E9811C8D919200C23D1C /* AppDelegate.swift in Sources */,
+				D9F9E9B11C8D926D00C23D1C /* ThirdViewController.swift in Sources */,
 				D9F9E9831C8D919200C23D1C /* FirstViewController.swift in Sources */,
+				D9F9E9B31C8D937600C23D1C /* FourthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
