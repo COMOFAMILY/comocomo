@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A98F31251C955ABD00A3BB08 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F31241C955ABD00A3BB08 /* CollectionViewCell.swift */; };
+		A98F31271C955AFA00A3BB08 /* SecondViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F31261C955AFA00A3BB08 /* SecondViewControllerDetail.swift */; };
 		D9F9E9811C8D919200C23D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9801C8D919200C23D1C /* AppDelegate.swift */; };
 		D9F9E9831C8D919200C23D1C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9821C8D919200C23D1C /* FirstViewController.swift */; };
 		D9F9E9851C8D919200C23D1C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9841C8D919200C23D1C /* SecondViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A98F31241C955ABD00A3BB08 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A98F31261C955AFA00A3BB08 /* SecondViewControllerDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewControllerDetail.swift; sourceTree = "<group>"; };
 		D9F9E97D1C8D919200C23D1C /* comocomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = comocomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F9E9801C8D919200C23D1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9F9E9821C8D919200C23D1C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				D9F9E9801C8D919200C23D1C /* AppDelegate.swift */,
 				D9F9E9821C8D919200C23D1C /* FirstViewController.swift */,
 				D9F9E9841C8D919200C23D1C /* SecondViewController.swift */,
+				A98F31261C955AFA00A3BB08 /* SecondViewControllerDetail.swift */,
+				A98F31241C955ABD00A3BB08 /* CollectionViewCell.swift */,
 				D9F9E9861C8D919200C23D1C /* Main.storyboard */,
 				D9F9E9891C8D919200C23D1C /* Assets.xcassets */,
 				D9F9E98B1C8D919200C23D1C /* LaunchScreen.storyboard */,
@@ -205,6 +211,7 @@
 				TargetAttributes = {
 					D9F9E97C1C8D919200C23D1C = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9VCV3C8R3A;
 					};
 					D9F9E9921C8D919300C23D1C = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -270,7 +277,9 @@
 			files = (
 				D9F9E9B51C8D948600C23D1C /* FifthViewController.swift in Sources */,
 				D9F9E9851C8D919200C23D1C /* SecondViewController.swift in Sources */,
+				A98F31271C955AFA00A3BB08 /* SecondViewControllerDetail.swift in Sources */,
 				D9F9E9811C8D919200C23D1C /* AppDelegate.swift in Sources */,
+				A98F31251C955ABD00A3BB08 /* CollectionViewCell.swift in Sources */,
 				D9F9E9B11C8D926D00C23D1C /* ThirdViewController.swift in Sources */,
 				D9F9E9831C8D919200C23D1C /* FirstViewController.swift in Sources */,
 				D9F9E9B31C8D937600C23D1C /* FourthViewController.swift in Sources */,
@@ -415,10 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = comocomo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jj.comocomo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -426,10 +438,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = comocomo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jj.comocomo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -500,6 +515,7 @@
 				D9F9E9A91C8D919300C23D1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9F9E9AA1C8D919300C23D1C /* Build configuration list for PBXNativeTarget "comocomoTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +524,7 @@
 				D9F9E9AC1C8D919300C23D1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9F9E9AD1C8D919300C23D1C /* Build configuration list for PBXNativeTarget "comocomoUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +533,7 @@
 				D9F9E9AF1C8D919300C23D1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
