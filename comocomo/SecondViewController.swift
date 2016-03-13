@@ -16,19 +16,23 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     let appleProducts = ["iphone", "applewatch", "Mac", "iPad","iphone", "applewatch", "Mac", "iPad"]
     
     let imageArray = [
-    UIImage(named: "a"),
-    UIImage(named: "b"),
-    UIImage(named: "c"),
-    UIImage(named: "d"),
+        UIImage(named: "a"),
+        UIImage(named: "b"),
+        UIImage(named: "c"),
+        UIImage(named: "d"),
         UIImage(named: "c"),
         UIImage(named: "d"),
         UIImage(named: "c"),
         UIImage(named: "d")
     ]
     
+    let date = ["2012-12-13","2012-12-14","2012-12-15","2012-12-16","2012-12-17","2012-12-18","2012-12-18","2012-12-19"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +51,8 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         cell.imageView?.image = self.imageArray[indexPath.row]
         
+        cell.writenDate?.text = self.date[indexPath.row]
+        
         cell.titleLabel?.text = self.appleProducts[indexPath.row]
         
         return cell
@@ -63,9 +69,10 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
             let indexPath = indexPaths[0] as NSIndexPath
             
             let vc = segue.destinationViewController as! SecondViewControllerDetail
-            
+
             vc.image = self.imageArray[indexPath.row]!
             vc.title = self.appleProducts[indexPath.row]
+            vc.textvar.text = self.date[indexPath.row]
         }
     }
 }

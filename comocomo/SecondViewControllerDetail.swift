@@ -7,16 +7,21 @@
 //
 
 import UIKit
- 
+
 class SecondViewControllerDetail: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var textField: UITextField!
+
+   
     var image = UIImage()
+    var textvar = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.imageView.image = self.image 
+        self.imageView.image = self.image
+        self.textField.text = self.textvar.text
     }
 
     override func didReceiveMemoryWarning() {
