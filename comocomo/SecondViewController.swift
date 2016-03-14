@@ -13,29 +13,55 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let appleProducts = ["양윤영", "한상현", "서정원", "손민희","송규동", "오준영", "최지인", "오길탁"]
+    let appleProducts = ["한상현", "홍길동", "트위터", "김범철", "송규동", "박수진", "김범철", "오길탁","한상현", "홍길동", "트위터", "김범철", "송규동", "박수진", "김범철", "오길탁"]
     
     let imageArray = [
         UIImage(named: "a"),
         UIImage(named: "b"),
         UIImage(named: "c"),
         UIImage(named: "d"),
+        UIImage(named: "e"),
+        UIImage(named: "f"),
+        UIImage(named: "g"),
+        UIImage(named: "h"),
+        UIImage(named: "a"),
+        UIImage(named: "b"),
         UIImage(named: "c"),
         UIImage(named: "d"),
-        UIImage(named: "c"),
-        UIImage(named: "d")
+        UIImage(named: "e"),
+        UIImage(named: "f"),
+        UIImage(named: "g"),
+        UIImage(named: "h")
     ]
     
-    let date = ["2012-12-13","2012-12-14","2012-12-15","2012-12-16","2012-12-17","2012-12-18","2012-12-18","2012-12-19"]
+    let date = ["2012-12-13","2012-12-14","2012-12-15","2012-12-16","2012-12-17","2012-12-18","2012-12-18","2012-12-19","2012-12-13","2012-12-14","2012-12-15","2012-12-16","2012-12-17","2012-12-18","2012-12-18","2012-12-19"]
     
-    
+    let lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ..."
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         
+        
+    }
+    
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        
+        if UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation) {
+            //here you can do the logic for the cell size if phone is in landscape
+        } else {
+            //logic if not landscape
+        }
+        
+        flowLayout.invalidateLayout()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,35 +74,31 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         return self.appleProducts.count
     }
 
+
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell        = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionViewCell
+        
+       
+                    let cell        = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionViewCell
+            
+            cell.imageView?.image = self.imageArray[indexPath.row]
+        
+        
+        
+            cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width / 2
+            cell.imageView.clipsToBounds = true
+            
+            cell.writenDate?.text = self.date[indexPath.row]
+            
+            cell.titleLabel?.text = self.appleProducts[indexPath.row]
+            cell.review?.text = lorem
+            return cell
+        
+        
 
-     
-
-        
-        let AccountCell = collectionView.dequeueReusableCellWithReuseIdentifier("account", forIndexPath: indexPath) as! CollectionViewCell
-        
-
-        
-
-        AccountCell.my
-
-        AccountCell.myType1?.text = "건성"
-        AccountCell.myType2?.text = "건성"
-        AccountCell.myType3?.text = "건성"
         
         
-        cell.imageView?.image = self.imageArray[indexPath.row]
-        cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width / 2
-        cell.imageView.clipsToBounds = true
-        
-        cell.writenDate?.text = self.date[indexPath.row]
-        
-        cell.titleLabel?.text = self.appleProducts[indexPath.row]
-        
-        return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -92,8 +114,9 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
             let vc = segue.destinationViewController as! SecondViewControllerDetail
 
             vc.image = self.imageArray[indexPath.row]!
-            vc.title = self.appleProducts[indexPath.row]
-            vc.textvar.text = self.date[indexPath.row]
+
+            vc.namevar.text = self.appleProducts[indexPath.row]
+            vc.datevar.text = self.date[indexPath.row]
         }
     }
 }

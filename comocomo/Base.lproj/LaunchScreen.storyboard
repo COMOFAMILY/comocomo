@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,14 +16,39 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comocomo" translatesAutoresizingMaskIntoConstraints="NO" id="eco-1H-nur">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2015 Design by Hanmarco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-Ak-YAL">
+                                <rect key="frame" x="20" y="638" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fj2-Ak-YAL" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="618" id="2Xf-qb-YW6"/>
+                            <constraint firstItem="eco-1H-nur" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="2su-2O-28m"/>
+                            <constraint firstItem="eco-1H-nur" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="6za-Yt-fbE"/>
+                            <constraint firstItem="eco-1H-nur" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="Dxx-Lb-ZbJ"/>
+                            <constraint firstItem="fj2-Ak-YAL" firstAttribute="centerX" secondItem="eco-1H-nur" secondAttribute="centerX" id="QZc-Wp-cVg"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="fj2-Ak-YAL" secondAttribute="bottom" constant="8" id="YTk-1m-AtI"/>
+                            <constraint firstItem="eco-1H-nur" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="375:667" id="anO-sp-G6t"/>
+                            <constraint firstItem="fj2-Ak-YAL" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="4" id="s8i-Kc-27c"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="374.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="comocomo" width="1024" height="1024"/>
+    </resources>
 </document>

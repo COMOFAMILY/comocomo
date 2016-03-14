@@ -16,7 +16,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var writenDate: UILabel!
     
-    @IBOutlet weak var review: UITextView!
+    @IBOutlet weak var review: UILabel!
     
     @IBAction func likeButton(sender: AnyObject) {
     }

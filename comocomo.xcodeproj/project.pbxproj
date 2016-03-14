@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A913A83B1C969E0200DCDE44 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A913A83A1C969E0200DCDE44 /* AccountCell.swift */; };
 		A98F31251C955ABD00A3BB08 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F31241C955ABD00A3BB08 /* CollectionViewCell.swift */; };
 		A98F31271C955AFA00A3BB08 /* SecondViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F31261C955AFA00A3BB08 /* SecondViewControllerDetail.swift */; };
 		D9F9E9811C8D919200C23D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9801C8D919200C23D1C /* AppDelegate.swift */; };
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A913A83A1C969E0200DCDE44 /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		A98F31241C955ABD00A3BB08 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		A98F31261C955AFA00A3BB08 /* SecondViewControllerDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewControllerDetail.swift; sourceTree = "<group>"; };
 		D9F9E97D1C8D919200C23D1C /* comocomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = comocomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +112,6 @@
 				D9F9E9801C8D919200C23D1C /* AppDelegate.swift */,
 				D9F9E9821C8D919200C23D1C /* FirstViewController.swift */,
 				D9F9E9841C8D919200C23D1C /* SecondViewController.swift */,
-				A913A83A1C969E0200DCDE44 /* AccountCell.swift */,
 				A98F31241C955ABD00A3BB08 /* CollectionViewCell.swift */,
 				A98F31261C955AFA00A3BB08 /* SecondViewControllerDetail.swift */,
 				D9F9E9861C8D919200C23D1C /* Main.storyboard */,
@@ -280,7 +277,6 @@
 			files = (
 				D9F9E9B51C8D948600C23D1C /* FifthViewController.swift in Sources */,
 				D9F9E9851C8D919200C23D1C /* SecondViewController.swift in Sources */,
-				A913A83B1C969E0200DCDE44 /* AccountCell.swift in Sources */,
 				A98F31271C955AFA00A3BB08 /* SecondViewControllerDetail.swift in Sources */,
 				D9F9E9811C8D919200C23D1C /* AppDelegate.swift in Sources */,
 				A98F31251C955ABD00A3BB08 /* CollectionViewCell.swift in Sources */,
