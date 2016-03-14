@@ -16,13 +16,15 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var writenDate: UILabel!
     
+    @IBOutlet weak var review: UITextView!
+    
+    @IBAction func likeButton(sender: AnyObject) {
+    }
     func viewDidLoad() {
         
-        imageView.layer.borderWidth = 1
-        imageView.layer.masksToBounds = false
-        imageView.layer.borderColor = UIColor.blackColor().CGColor
-        imageView.layer.cornerRadius = imageView.frame.height/2
+        imageView.layer.cornerRadius = imageView.frame.size.width / 2
         imageView.clipsToBounds = true
+    
     }
     
 }
