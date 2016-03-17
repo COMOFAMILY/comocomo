@@ -20,6 +20,9 @@
 		D9F9E9B11C8D926D00C23D1C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9B01C8D926D00C23D1C /* ThirdViewController.swift */; };
 		D9F9E9B31C8D937600C23D1C /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9B21C8D937600C23D1C /* FourthViewController.swift */; };
 		D9F9E9B51C8D948600C23D1C /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9B41C8D948600C23D1C /* FifthViewController.swift */; };
+		EB8B124A1C9A937300301A7B /* PopluerImagePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B12471C9A937300301A7B /* PopluerImagePageViewController.swift */; };
+		EB8B124B1C9A937300301A7B /* PopularSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B12481C9A937300301A7B /* PopularSearchViewController.swift */; };
+		EB8B124C1C9A937300301A7B /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B12491C9A937300301A7B /* SearchTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		D9F9E9B01C8D926D00C23D1C /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		D9F9E9B21C8D937600C23D1C /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		D9F9E9B41C8D948600C23D1C /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		EB8B12471C9A937300301A7B /* PopluerImagePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopluerImagePageViewController.swift; sourceTree = "<group>"; };
+		EB8B12481C9A937300301A7B /* PopularSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularSearchViewController.swift; sourceTree = "<group>"; };
+		EB8B12491C9A937300301A7B /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 		D9F9E97F1C8D919200C23D1C /* comocomo */ = {
 			isa = PBXGroup;
 			children = (
+				EB8B12471C9A937300301A7B /* PopluerImagePageViewController.swift */,
+				EB8B12481C9A937300301A7B /* PopularSearchViewController.swift */,
+				EB8B12491C9A937300301A7B /* SearchTableViewController.swift */,
 				D9F9E9801C8D919200C23D1C /* AppDelegate.swift */,
 				D9F9E9821C8D919200C23D1C /* FirstViewController.swift */,
 				D9F9E9841C8D919200C23D1C /* SecondViewController.swift */,
@@ -275,12 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8B124B1C9A937300301A7B /* PopularSearchViewController.swift in Sources */,
 				D9F9E9B51C8D948600C23D1C /* FifthViewController.swift in Sources */,
 				D9F9E9851C8D919200C23D1C /* SecondViewController.swift in Sources */,
+				EB8B124A1C9A937300301A7B /* PopluerImagePageViewController.swift in Sources */,
 				A98F31271C955AFA00A3BB08 /* SecondViewControllerDetail.swift in Sources */,
 				D9F9E9811C8D919200C23D1C /* AppDelegate.swift in Sources */,
 				A98F31251C955ABD00A3BB08 /* CollectionViewCell.swift in Sources */,
 				D9F9E9B11C8D926D00C23D1C /* ThirdViewController.swift in Sources */,
+				EB8B124C1C9A937300301A7B /* SearchTableViewController.swift in Sources */,
 				D9F9E9831C8D919200C23D1C /* FirstViewController.swift in Sources */,
 				D9F9E9B31C8D937600C23D1C /* FourthViewController.swift in Sources */,
 			);
