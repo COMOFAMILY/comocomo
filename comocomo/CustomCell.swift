@@ -12,7 +12,7 @@ class CustomCell: UITableViewCell {
     
     @IBOutlet var productImg: UIImageView!
     @IBOutlet var productName: UILabel!
-
+//hello
     @IBOutlet var brandName: UILabel!
     @IBOutlet var skinProp: UILabel!
     
