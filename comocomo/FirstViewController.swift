@@ -17,7 +17,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     var productName = ["미네랄 멜팅 쿠션", "로즈 에스쁘아 립스틱 노웨어G", "제네피크 유스 엑티베이팅 컨센트레이터"]
     var brandName = ["이니스프리", "에스쁘아", "LANCOM"]
     var skinProp = ["#지복합성#민감성#저렴", "#매트한#선명한#적당한가격", "#매트#차분함#높은가격"]
-    var images = [UIImage(named: "a"),UIImage(named: "b"), UIImage(named: "c")]
+    var images = [UIImage(named: "c"),UIImage(named: "e"), UIImage(named: "h")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +29,12 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         //?&playsinline의 값을 1(참)로 줌으로써 프레임 안에서 바로 재생 가능
 
 
-        videoView.loadHTMLString("<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ZryhViOvQF0\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
+        videoView.loadHTMLString("<iframe width=\"\(videoView.frame.width)\" height=\"\(videoView.frame.height)\" src=\"https://www.youtube.com/embed/ZryhViOvQF0\" frameborder=\"0\" allowfullscreen></iframe>", baseURL: nil)
         
-        let statusBarColor = UIColor(red: 254/255.0, green: 109/255.0, blue: 102/255.0, alpha: 1)
-        let colorStateBar : UIView = UIView(frame: CGRectMake(0,0,self.view.frame.size.width, 20))
-        colorStateBar.backgroundColor = statusBarColor
-        self.view.addSubview(colorStateBar)
+//        let statusBarColor = UIColor(red: 254/255.0, green: 109/255.0, blue: 102/255.0, alpha: 1)
+//        let colorStateBar : UIView = UIView(frame: CGRectMake(0,0,self.view.frame.size.width, 20))
+//        colorStateBar.backgroundColor = statusBarColor
+//        self.view.addSubview(colorStateBar)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int)->Int {
@@ -44,10 +44,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomCell
-        
-        
-//        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomCell
-        
         
         
         cell.productImg?.image = self.images[indexPath.row]
