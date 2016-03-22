@@ -22,9 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Image Background Navigation Bar
         let navBackgroundImage:UIImage! = UIImage(named: "back")
         UINavigationBar.appearance().setBackgroundImage(navBackgroundImage, forBarMetrics: .Default)
-        
-        sleep(3)
-        
+                
         UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGrayColor()
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.redColor()
         
