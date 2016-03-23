@@ -14,9 +14,7 @@ class SecondViewControllerDetail: UIViewController {
     @IBOutlet weak var backgroundView: UIImageView!
     @IBOutlet weak var nameField: UILabel!
     @IBOutlet weak var dateField: UILabel!
-   
-
-   
+      
     var image = UIImage()
     var datevar = UILabel()
     var namevar = UILabel()
