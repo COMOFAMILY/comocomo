@@ -41,6 +41,17 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let url = "http://52.37.211.140:9000/wines"
+
+        let nsurl = NSURL(string: url)
+        
+        let data = NSData(contentsOfURL: nsurl!)
+        
+        let strSiteData = NSString(data: data!, encoding: NSUTF8StringEncoding)
+
+        
+        print(strSiteData)
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         
