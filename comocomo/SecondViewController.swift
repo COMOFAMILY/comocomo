@@ -13,7 +13,8 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let appleProducts = ["한상현", "홍길동", "트위터", "김범철", "송규동", "박수진", "김범철", "오길탁","한상현", "홍길동", "트위터", "김범철", "송규동", "박수진", "김범철", "오길탁"]
+    var appleProducts = ["한상현", "홍길동", "트위터", "김범철", "송규동", "박수진", "김범철", "오길탁","한상현", "홍길동", "트위터", "김범철", "송규동", "박수진", "김범철", "오길탁"]
+      var appleProducts2 = Array<String>()
     
     let imageArray = [
         UIImage(named: "a"),
@@ -41,16 +42,30 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = "http://52.37.211.140:9000/wines"
+        let url = "http://52.37.211.140:9000/users"
 
         let nsurl = NSURL(string: url)
-        
         let data = NSData(contentsOfURL: nsurl!)
-        
-        let strSiteData = NSString(data: data!, encoding: NSUTF8StringEncoding)
 
         
-        print(strSiteData)
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+            
+            if let blogs = json as? [[String: AnyObject]] {
+                for blog in blogs {
+                    if let name = blog["username"] as? String {
+                        appleProducts2.append(name)
+                    }
+                }
+            }
+        } catch {
+            print("error serializing JSON: \(error)")
+        }
+        
+      
+        
+
+      
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -82,7 +97,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     //아이템 몇개 출력??
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.appleProducts.count
+        return self.appleProducts2.count
     }
 
 
@@ -102,7 +117,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
             
             cell.writenDate?.text = self.date[indexPath.row]
             
-            cell.titleLabel?.text = self.appleProducts[indexPath.row]
+            cell.titleLabel?.text = self.appleProducts2[indexPath.row]
             cell.review?.text = lorem
             return cell
         
@@ -126,7 +141,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
 
             vc.image = self.imageArray[indexPath.row]!
 
-            vc.namevar.text = self.appleProducts[indexPath.row]
+            vc.namevar.text = self.appleProducts2[indexPath.row]
             vc.datevar.text = self.date[indexPath.row]
         }
     }
