@@ -18,15 +18,22 @@ class SecondViewControllerDetail: UIViewController {
     var image = UIImage()
     var datevar = UILabel()
     var namevar = UILabel()
+    let unload = UIImage(named:"unload_image")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
+        if self.image.isEqual(unload) {
+            self.backgroundView.image = UIImage(named: "basic_background")!
+        }
+        else
+        {
+            self.backgroundView.image = self.image
+        }
         self.imageView.image = self.image
         self.nameField.text = self.namevar.text
         self.dateField.text = self.datevar.text
-        self.backgroundView.image = self.image
         imageView.layer.cornerRadius = imageView.frame.size.width / 2
         imageView.clipsToBounds = true
         imageView.layer.borderColor = UIColor.whiteColor().CGColor
