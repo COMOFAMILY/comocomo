@@ -13,57 +13,76 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let appleProducts = ["한상현", "홍길동", "트위터", "김범철", "송규동", "박수진", "김범철", "오길탁","한상현", "홍길동", "트위터", "김범철", "송규동", "박수진", "김범철", "오길탁"]
+    var writerName = Array<String>()
+    var writenDate = Array<NSDate>()
+    var writerProfile = Array<UIImage>()
+    var contents = Array<String>()
+    let unload = UIImage(named:"unload_image")//프로필이 없는경우 기본 사진으로 설정
     
-    let imageArray = [
-        UIImage(named: "a"),
-        UIImage(named: "b"),
-        UIImage(named: "c"),
-        UIImage(named: "d"),
-        UIImage(named: "e"),
-        UIImage(named: "f"),
-        UIImage(named: "g"),
-        UIImage(named: "h"),
-        UIImage(named: "a"),
-        UIImage(named: "b"),
-        UIImage(named: "c"),
-        UIImage(named: "d"),
-        UIImage(named: "e"),
-        UIImage(named: "f"),
-        UIImage(named: "g"),
-        UIImage(named: "h")
-    ]
-    
-    let date = ["2012-12-13","2012-12-14","2012-12-15","2012-12-16","2012-12-17","2012-12-18","2012-12-18","2012-12-19","2012-12-13","2012-12-14","2012-12-15","2012-12-16","2012-12-17","2012-12-18","2012-12-18","2012-12-19"]
-    
-    let lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ..."
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url = "http://52.37.211.140:9000/getReview" //리뷰를 불러오는 명령
+        let nsurl = NSURL(string: url)
+        let data = NSData(contentsOfURL: nsurl!)
+        
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+            
+            if let jsonDatalist = json as? [[String: AnyObject]] { //파싱을 시작한다.
+                for jsonData in jsonDatalist {
+                    //작성자 이름을 가져와서 배열에 추가
+                    if let isname = jsonData["userName"] as? String {
+                        writerName.append(isname)
+                    }
+                    //작성된 날자를 가져와서 배열에 추가 
+                    //dateFormatter가 날짜형식을 정해줌
+                    if let isdate = jsonData["date"] as? String {
+                        
+                        let dateFormatter = NSDateFormatter()
+                        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.zzzZ"
+                        
+                        let date: NSDate? = dateFormatter.dateFromString(isdate)
+                        
+                        writenDate.append(date!)
+                        
+                    }
+                    
+                    //profile속성을 db에서 확인해서 값이 있으면 사진을 보여주고 
+                    //값이 없으면 기본 사진인 unload_image사진을 보여준다.
+                    if let profile = jsonData["profile"] as? String{
+                       let image : UIImage = UIImage(named:"\(profile)")!
+                        writerProfile.append(image)
+                        
+                    }
+                    else{
+                        writerProfile.append(unload!)
+                    }
+                    
+                    if let content = jsonData["content"] as? String {
+                         contents.append(content)
+                    }
+                    
+                    
+                }
+            }
+        } catch {
+            print("error serializing JSON: \(error)")
+        }
+        
+      
+        print(writenDate)
+
+      
         
         // Do any additional setup after loading the view, typically from a nib.
         
         
         
     }
-    
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        
-        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
-            return
-        }
-        
-        if UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation) {
-            //here you can do the logic for the cell size if phone is in landscape
-        } else {
-            //logic if not landscape
-        }
-        
-        flowLayout.invalidateLayout()
-    }
-
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -71,7 +90,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     //아이템 몇개 출력??
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.appleProducts.count
+        return self.writerName.count
     }
 
 
@@ -82,17 +101,18 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
        
                     let cell        = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CollectionViewCell
             
-            cell.imageView?.image = self.imageArray[indexPath.row]
+            cell.imageView?.image = self.writerProfile[indexPath.row]
         
         
         
             cell.imageView.layer.cornerRadius = cell.imageView.frame.size.width / 2
             cell.imageView.clipsToBounds = true
-            
-            cell.writenDate?.text = self.date[indexPath.row]
-            
-            cell.titleLabel?.text = self.appleProducts[indexPath.row]
-            cell.review?.text = lorem
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.zzzZ"
+        
+            cell.writenDate?.text = dateFormatter.stringFromDate(self.writenDate[indexPath.row])
+        cell.titleLabel?.text = self.writerName[indexPath.row]
+            cell.review?.text = self.contents[indexPath.row]
             return cell
         
         
@@ -113,10 +133,19 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
             
             let vc = segue.destinationViewController as! SecondViewControllerDetail
 
-            vc.image = self.imageArray[indexPath.row]!
-
-            vc.namevar.text = self.appleProducts[indexPath.row]
-            vc.datevar.text = self.date[indexPath.row]
+            
+//            if self.writerProfile[indexPath.row].isEqual(unload){
+//                vc.image = UIImage(named: "basic_background")!
+//            }else{
+                vc.image = self.writerProfile[indexPath.row]
+//            }
+            vc.namevar.text = self.writerName[indexPath.row]
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.zzzZ"
+            
+            vc.datevar.text = dateFormatter.stringFromDate(self.writenDate[indexPath.row])
+            
         }
     }
 }

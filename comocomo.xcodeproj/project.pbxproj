@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7BFE7DD1CA4D5BC004A9966 /* sharedCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BFE7DC1CA4D5BC004A9966 /* sharedCode.swift */; };
 		A98F31251C955ABD00A3BB08 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F31241C955ABD00A3BB08 /* CollectionViewCell.swift */; };
 		A98F31271C955AFA00A3BB08 /* SecondViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98F31261C955AFA00A3BB08 /* SecondViewControllerDetail.swift */; };
 		D9F9E9811C8D919200C23D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9E9801C8D919200C23D1C /* AppDelegate.swift */; };
@@ -24,6 +25,10 @@
 		EB8B124A1C9A937300301A7B /* PopluerImagePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B12471C9A937300301A7B /* PopluerImagePageViewController.swift */; };
 		EB8B124B1C9A937300301A7B /* PopularSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B12481C9A937300301A7B /* PopularSearchViewController.swift */; };
 		EB8B124C1C9A937300301A7B /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B12491C9A937300301A7B /* SearchTableViewController.swift */; };
+		EBF4912D1CA5055400794611 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF491291CA5055400794611 /* Bolts.framework */; };
+		EBF4912E1CA5055400794611 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF4912A1CA5055400794611 /* FBSDKCoreKit.framework */; };
+		EBF4912F1CA5055400794611 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF4912B1CA5055400794611 /* FBSDKLoginKit.framework */; };
+		EBF491301CA5055400794611 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF4912C1CA5055400794611 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7BFE7DC1CA4D5BC004A9966 /* sharedCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sharedCode.swift; sourceTree = "<group>"; };
 		A98F31241C955ABD00A3BB08 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		A98F31261C955AFA00A3BB08 /* SecondViewControllerDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewControllerDetail.swift; sourceTree = "<group>"; };
 		D9F9E97D1C8D919200C23D1C /* comocomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = comocomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +73,10 @@
 		EB8B12471C9A937300301A7B /* PopluerImagePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopluerImagePageViewController.swift; sourceTree = "<group>"; };
 		EB8B12481C9A937300301A7B /* PopularSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularSearchViewController.swift; sourceTree = "<group>"; };
 		EB8B12491C9A937300301A7B /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		EBF491291CA5055400794611 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		EBF4912A1CA5055400794611 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		EBF4912B1CA5055400794611 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		EBF4912C1CA5055400794611 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF491301CA5055400794611 /* FBSDKShareKit.framework in Frameworks */,
+				EBF4912D1CA5055400794611 /* Bolts.framework in Frameworks */,
+				EBF4912E1CA5055400794611 /* FBSDKCoreKit.framework in Frameworks */,
+				EBF4912F1CA5055400794611 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,12 +131,14 @@
 		D9F9E97F1C8D919200C23D1C /* comocomo */ = {
 			isa = PBXGroup;
 			children = (
+				EBF491311CA5055800794611 /* FacebookSDK */,
 				EB8B12471C9A937300301A7B /* PopluerImagePageViewController.swift */,
 				EB8B12481C9A937300301A7B /* PopularSearchViewController.swift */,
 				EB8B12491C9A937300301A7B /* SearchTableViewController.swift */,
 				D9F9E9801C8D919200C23D1C /* AppDelegate.swift */,
 				D9F9E9821C8D919200C23D1C /* FirstViewController.swift */,
 				D9F9E9841C8D919200C23D1C /* SecondViewController.swift */,
+				A7BFE7DC1CA4D5BC004A9966 /* sharedCode.swift */,
 				A98F31241C955ABD00A3BB08 /* CollectionViewCell.swift */,
 				D9FD3E921C9FF52000B6E600 /* CustomCell.swift */,
 				A98F31261C955AFA00A3BB08 /* SecondViewControllerDetail.swift */,
@@ -153,6 +169,17 @@
 				D9F9E9A41C8D919300C23D1C /* Info.plist */,
 			);
 			path = comocomoUITests;
+			sourceTree = "<group>";
+		};
+		EBF491311CA5055800794611 /* FacebookSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EBF491291CA5055400794611 /* Bolts.framework */,
+				EBF4912A1CA5055400794611 /* FBSDKCoreKit.framework */,
+				EBF4912B1CA5055400794611 /* FBSDKLoginKit.framework */,
+				EBF4912C1CA5055400794611 /* FBSDKShareKit.framework */,
+			);
+			name = FacebookSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +250,6 @@
 				TargetAttributes = {
 					D9F9E97C1C8D919200C23D1C = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = S9GHSK5M7V;
 					};
 					D9F9E9921C8D919300C23D1C = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -287,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7BFE7DD1CA4D5BC004A9966 /* sharedCode.swift in Sources */,
 				EB8B124B1C9A937300301A7B /* PopularSearchViewController.swift in Sources */,
 				D9F9E9B51C8D948600C23D1C /* FifthViewController.swift in Sources */,
 				D9F9E9851C8D919200C23D1C /* SecondViewController.swift in Sources */,
@@ -442,9 +469,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/comocomo",
+				);
 				INFOPLIST_FILE = comocomo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jj.comocomo;
+				PRODUCT_BUNDLE_IDENTIFIER = asdf.comocomom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -456,9 +487,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/comocomo",
+				);
 				INFOPLIST_FILE = comocomo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jj.comocomo;
+				PRODUCT_BUNDLE_IDENTIFIER = asdf.comocomom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
