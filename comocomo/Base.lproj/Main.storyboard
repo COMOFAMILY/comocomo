@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
+<<<<<<< HEAD
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+=======
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+>>>>>>> garden
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -46,7 +51,11 @@
                                         <rect key="frame" x="0.0" y="28" width="355" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ntp-dG-iVn" id="gUz-lC-ckv">
+<<<<<<< HEAD
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="71.5"/>
+=======
+                                            <rect key="frame" x="0.0" y="0.0" width="368" height="71.5"/>
+>>>>>>> garden
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oDc-8g-mWP">
@@ -496,11 +505,11 @@
                         <color key="tintColor" red="0.96229225397109985" green="0.069087482988834381" blue="0.42366534471511841" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="P4J-hO-Fxt" kind="relationship" relationship="viewControllers" id="Y4k-KD-Xpx"/>
-                        <segue destination="Msq-sI-ztA" kind="relationship" relationship="viewControllers" id="Vie-1b-3tj"/>
                         <segue destination="7e9-OF-Y7F" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="PRs-sd-qWr" kind="relationship" relationship="viewControllers" id="8JL-zJ-rLp"/>
-                        <segue destination="xlu-ch-toO" kind="relationship" relationship="viewControllers" id="4DH-uq-3Jo"/>
+                        <segue destination="P4J-hO-Fxt" kind="relationship" relationship="viewControllers" id="35P-Uz-f9G"/>
+                        <segue destination="Msq-sI-ztA" kind="relationship" relationship="viewControllers" id="xqM-38-TPS"/>
+                        <segue destination="xlu-ch-toO" kind="relationship" relationship="viewControllers" id="YSj-wZ-LwL"/>
+                        <segue destination="PRs-sd-qWr" kind="relationship" relationship="viewControllers" id="s2g-5q-h5u"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -527,7 +536,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRX-k9-q6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10.5" y="-642.5"/>
+            <point key="canvasLocation" x="-11.5" y="-642.5"/>
         </scene>
         <!--나의 코모-->
         <scene sceneID="bct-LT-uF5">
@@ -691,11 +700,11 @@
             </objects>
             <point key="canvasLocation" x="1565.5" y="-56.5"/>
         </scene>
-        <!--Fourth-->
+        <!--검색-->
         <scene sceneID="EFZ-QM-dLF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xlu-ch-toO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Fourth" id="XnB-Mq-Emy"/>
+                    <tabBarItem key="tabBarItem" title="검색" id="XnB-Mq-Emy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="ZUU-qh-Grb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
